@@ -5,29 +5,35 @@
 <br>
 <div class="row">
     <div id="content-1">
+       <% if @articles %>
 	   <% @articles[0..1].each do |article| %>
 	      <ul>
 	        <li><h3><%= link_to "#{article.title.split(",").first.upcase}", article_path(article), class: 'style-home-link' %></h3></li>
 	        <br>
 	      </ul>
 	   <% end %>
+	  <% end %>
     </div>
 
     <div id="content-2-1">
+       <% if @articles %>
 	   <% @articles[2..3].each do |article| %>
 	      <ul>
 	        <li><h3><%= link_to "#{article.title.split(",").first.upcase}", article_path(article), class: 'style-home-link' %></h3></li>
 	        <br>
 	      </ul>
 	   <% end %>
+	 <% end %>
     </div>
         <div id="content-2-2">
+        <% if @articles %>
 	   <% @articles[4..5].each do |article| %>
 	      <ul>
 	        <li><h3><%= link_to "#{article.title.split(",").first.upcase}", article_path(article), class: 'style-home-link' %></h3></li>
 	        <br>
 	      </ul>
 	   <% end %>
+	   <% end %>	   
     </div>
 </div>
 
